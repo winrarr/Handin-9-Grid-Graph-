@@ -18,8 +18,8 @@ public class Algorithm {
                 lowest[i][j] = Math.min(lowest[i][j - 1] + g[i][j - 1].right, lowest[i][j]);
             }
             for (int j = k - 2; j >= 0; j--) {
-                lowest[i + 1][k - 1] = lowest[i][k - 1] + g[i][k - 1].up;
                 lowest[i][j] = Math.min(lowest[i][j + 1] + g[i][j + 1].left, lowest[i][j]);
+                lowest[i + 1][k - 1] = lowest[i][k - 1] + g[i][k - 1].up;
                 lowest[i + 1][j] = lowest[i][j] + g[i][j].up;
             }
         }
