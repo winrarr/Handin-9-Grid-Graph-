@@ -25,8 +25,6 @@ public class Algorithm {
         }
     }
 
-
-
     public void getGraph(int k) {
         g = new Vertex[k][k];
         lowest = new int[k][k];
